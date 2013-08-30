@@ -98,7 +98,7 @@ namespace VSModelines
             if (settings.et == null)
             {
                 // If the language is C++, use the default tab setting (hard tabs), otherwise,
-				// VS seems to like soft tabs for other languages.
+                // VS seems to like soft tabs for other languages.
                 if (gotFocus.Document.Language == CodeModelLanguageConstants.vsCMLanguageVC)
                     settings.et = kDefaultHardTabs;
                 else
@@ -108,7 +108,7 @@ namespace VSModelines
             if (settings.ts == null)
                 settings.ts = kDefaultTabSize;
 
-			// In Vim and Visual Studio, the following settings are roughly analogous:
+            // In Vim and Visual Studio, the following settings are roughly analogous:
             //    ts and TabSize
             //    sw and IndentSize
             //    noet/et and InsertTabs
@@ -133,7 +133,7 @@ namespace VSModelines
 
             SetDTEProperty("TextEditor", gotFocus.Document.Language, "TabSize", settings.ts);
             SetDTEProperty("TextEditor", gotFocus.Document.Language, "IndentSize", settings.sw);
-			SetDTEProperty("TextEditor", gotFocus.Document.Language, "InsertTabs", !settings.et);
+            SetDTEProperty("TextEditor", gotFocus.Document.Language, "InsertTabs", !settings.et);
         }
 
         private void ReadModelines(TextDocument td, Settings settings)
@@ -187,9 +187,9 @@ namespace VSModelines
             int nchars = 0;
             for (int i = index + key.Length; i < line.Length; i++)
             {
-				if (!Char.IsNumber(line[i]))
-					break;
-				nchars++;
+                if (!Char.IsNumber(line[i]))
+                    break;
+                nchars++;
             }
 
             int result = 0;
