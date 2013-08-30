@@ -8,10 +8,10 @@ If any of the first 3 lines of a file contains:
    vim: set
 
 Then the rest of the line is scanned for any occurrence of:
-   ts=<n>    - Sets TabSize property.
-   sw=<n>    - Sets IndentSize property.
-   et        - Sets InsertTabs to false.
-   noet      - Sets InsertTabs to true.
+* ts=\<n\>    - Sets TabSize property.
+* sw=\<n\>    - Sets IndentSize property.
+* et        - Sets InsertTabs to false.
+* noet      - Sets InsertTabs to true.
 
 The line must end in a ':' as vim requires. Example:
 
